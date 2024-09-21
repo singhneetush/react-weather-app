@@ -38,7 +38,9 @@ function Forecast({ city, unit }) {
 			{error && <div className='error-message text-red-600'>{error}</div>}
 			<div className=' grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4'>
 				{forecastData.map((day, index) => (
-					<div key={index} className='forecast-card  p-4 rounded shadow-lg'>
+					<div
+						key={index}
+						className='forecast-card bg-gray-900 opacity-70 p-4 rounded shadow-lg'>
 						<p className='text-lg font-semibold'>
 							{new Date(day.dt_txt).toLocaleDateString('en-US', {
 								weekday: 'long',
