@@ -5,7 +5,7 @@ function WeatherDisplay({ weatherData, unit, toggleUnit }) {
 		return <p>Loading weather data...</p>;
 	}
 
-	const { name, main, weather } = weatherData;
+	const {  main, weather } = weatherData;
 	const tempUnit = unit === 'metric' ? '°C' : '°F';
 
 	return (
