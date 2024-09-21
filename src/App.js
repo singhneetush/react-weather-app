@@ -27,7 +27,7 @@ function App() {
 		} else {
 			console.error('Geolocation is not supported by this browser.');
 		}
-	}, [city]);
+	}, []);
 
 	const fetchWeather = useCallback(
 		async (cityName) => {
