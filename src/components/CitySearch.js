@@ -23,7 +23,7 @@ function CitySearch({ setCity }) {
 	return (
 		<div className='city-search'>
 			<form onSubmit={handleSubmit} className='flex flex-col justify-center'>
-				<div className='flex justify-center'>
+				<div>
 					<input
 						type='text'
 						placeholder='Search city...'
