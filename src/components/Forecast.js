@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 function Forecast({ city, unit }) {
 	const [forecastData, setForecastData] = useState([]);
 	const [error, setError] = useState(null);
+	const tempUnit = unit === 'metric' ? '°C' : '°F';
 
 	useEffect(() => {
 		const fetchForecast = async () => {
@@ -44,13 +45,21 @@ function Forecast({ city, unit }) {
 							})}
 						</p>
 						<p className='text-sm'>
-							{day.main.temp_min}° / {day.main.temp_max}°
+							{day.main.temp_min}
+							{tempUnit} / {day.main.temp_max}
+							{tempUnit}
 						</p>
 						<img
 							src={`http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`}
 							alt='Weather icon'
 							className='mx-auto'
 						/>
+						<p>Wind: {day?.wind?.speed} m/sec</p>
+						<p>
+							Real Feel : {day?.main?.feels_like}
+							{tempUnit}{' '}
+						</p>
+						<p>Humidity : {day?.main?.humidity} %</p>
 					</div>
 				))}
 			</div>

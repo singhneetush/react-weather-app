@@ -37,7 +37,7 @@ function App() {
 				);
 				const data = await response.json();
 				setWeatherData(data);
-				// console.log(data);
+				console.log(data);
 			} catch (error) {
 				console.error('Error fetching weather data:', error);
 			}
@@ -68,7 +68,7 @@ function App() {
 			className='text-center bg-cover h-100vh'
 			style={{ backgroundImage: "url('images/homeBgFull.webp')" }}>
 			<div>
-				<h1 className='lg:text-5xl text-3xl lg:pt-[4rem] py-[3rem] text-white lg:font-semibold italic'>
+				<h1 className='lg:text-5xl text-3xl lg:pt-[4rem] py-[3rem] text-white lg:font-semibold '>
 					Weather in {capitalizeFirstWord(city)}
 				</h1>
 			</div>
